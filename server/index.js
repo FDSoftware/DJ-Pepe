@@ -25,9 +25,13 @@ client.once('reconnecting', () => {
 
 client.on('message', async message => {
 	if (message.author.bot) return;
+
+	if (message.content.includes('idiota')) {
+		return message.reply('JUIRA BICHO');
+	}
+
 	if (!message.content.startsWith(PREFIX)) return; // quien te conoce papa?
 	message.content = message.content.substring(1);
-
 	if (message.content.startsWith('panchuke')) {
 		// https://images.clarin.com/2017/09/11/rJHXmbNq-_340x340.jpg
 		return message.reply('*pancho electronico', {
@@ -46,7 +50,16 @@ client.on('message', async message => {
 		});
 	}
 	try {
-		return api(message);
+		if (!api(message)) {
+			const numero = Math.floor(Math.random() * 5 + 1);
+			if (numero < 3) {
+				message.reply('Ese comando no existe, pero la puta madreee!!!');
+			} else {
+				message.reply(
+					`usa ${PREFIX}help para tener una lista de comandos`
+				);
+			}
+		}
 	} catch (error) {
 		console.error(error);
 		const numero = Math.floor(Math.random() * 100 + 1);

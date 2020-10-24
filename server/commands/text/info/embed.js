@@ -7,18 +7,18 @@ export const Embed = () => {
 			url: 'https://discordapp.com',
 			color: 13632027,
 			timestamp: '2020-08-19T23:58:35.599Z',
-			footer: {
+			/* footer: {
 				icon_url: 'https://cdn.discordapp.com/embed/avatars/0.png',
 				text: 'footer text',
-			},
+			}, */
 			/* 			image: {
 				url: 'https://cdn.discordapp.com/embed/avatars/0.png',
 			}, */
-			author: {
+		/* 	author: {
 				name: 'author name',
 				url: 'https://discordapp.com',
 				icon_url: 'https://cdn.discordapp.com/embed/avatars/0.png',
-			},
+			}, */
 		};
 
 		message.channel.send('msg random', { embed });

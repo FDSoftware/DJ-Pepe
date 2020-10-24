@@ -2,7 +2,9 @@
 
 export const Middlewares = fun => message => {
 	// por ahora no hay que hacer nada mas que mapear los comandos actuales, y si coincide, ejecutarlo
-	fun.map(e => message.content.startsWith(e.prefix) && e.exec(message));
+	return fun
+		.map(e => message.content.startsWith(e.prefix) && e.exec(message))
+		.filter(Boolean).length;
 };
 // logea memoria usada
 export const logMemUsg = () => {

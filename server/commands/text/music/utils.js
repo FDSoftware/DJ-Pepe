@@ -70,7 +70,7 @@ export const preplay = async (message, url2, NO_SPAM) => {
 			connection: null,
 			songs: [],
 			// eslint-disable-next-line no-inline-comments
-			volume: 1.14, // 2.14 ~ 3.14 la cosa sana para los timpanos
+			volume: 0.34, // 2.14 ~ 3.14 la cosa sana para los timpanos
 			playing: true,
 		};
 
